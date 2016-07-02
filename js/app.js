@@ -1,9 +1,12 @@
-// wait for the DOM to finish loading
+// A $( document ).ready() block.
 $(document).ready(function() {
-  // all code to manipulate the DOM
-  // goes inside this function
-  $(".row").on("hover", function testClick(event){
-       alert("You clicked me!");
-   });
+    console.log( "ready!" );
 
-});
+    $( ".box" ).on( "click", function() {
+      var x;
+    if ('.box[x]', x%2===0)
+        $( this ).css( "color", "red" );
+      });
+        $( this ).css( "color", "blue" );
+
+    });
