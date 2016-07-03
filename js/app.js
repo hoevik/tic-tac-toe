@@ -1,12 +1,17 @@
 // A $( document ).ready() block.
-$(document).ready(function() {
-    console.log( "ready!" );
+$(document).ready(function() { //runs jquery when page is ready
+  console.log( "ready!" ); //testin if jquery run, fired up ready to go
 
-    $( ".box" ).on( "click", function() {
-      var x;
-    if ('.box[x]', x%2===0)
-        $( this ).css( "color", "red" );
-      });
-        $( this ).css( "color", "blue" );
+  var counter = 1; //counter of clicks
+    $( ".box" ).one( "click", function(event) {
+      event.preventDefault();
+      if (counter%2===1){
+        $( this ).css( "color", "red");
+      } else if (counter%2===0){
+        $( this ).css('color', 'blue');
+      }
+      counter++;
 
     });
+
+});
