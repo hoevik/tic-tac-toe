@@ -17,8 +17,7 @@ $(document).ready(function() { //runs jquery when page is ready
         $( this ).val('oo');
       }
       counter++;//add anoter to counter to keep control over turns
-
-      if( ($('.1').val()==='oo')&&($('.2').val()==='oo')&&($('.3').val()==='oo')||
+       if(($('.1').val()==='oo')&&($('.2').val()==='oo')&&($('.3').val()==='oo')||
           ($('.4').val()==='oo')&&($('.5').val()==='oo')&&($('.6').val()==='oo')||
           ($('.7').val()==='oo')&&($('.8').val()==='oo')&&($('.9').val()==='oo')||
           ($('.1').val()==='oo')&&($('.4').val()==='oo')&&($('.7').val()==='oo')||
@@ -26,8 +25,8 @@ $(document).ready(function() { //runs jquery when page is ready
           ($('.3').val()==='oo')&&($('.6').val()==='oo')&&($('.9').val()==='oo')||
           ($('.1').val()==='oo')&&($('.5').val()==='oo')&&($('.9').val()==='oo')||
           ($('.3').val()==='oo')&&($('.5').val()==='oo')&&($('.7').val()==='oo')){
-          alert('O wins, sorry bruh,o');
-          }
+          return alert('O wins, sorry bruh');
+        }
       else if(  ($('.1').val()==='xx')&&($('.2').val()==='xx')&&($('.3').val()==='xx')||
                 ($('.4').val()==='xx')&&($('.5').val()==='xx')&&($('.6').val()==='xx')||
                 ($('.7').val()==='xx')&&($('.8').val()==='xx')&&($('.9').val()==='xx')||
@@ -36,13 +35,13 @@ $(document).ready(function() { //runs jquery when page is ready
                 ($('.3').val()==='xx')&&($('.6').val()==='xx')&&($('.9').val()==='xx')||
                 ($('.1').val()==='xx')&&($('.5').val()==='xx')&&($('.9').val()==='xx')||
                 ($('.3').val()==='xx')&&($('.5').val()==='xx')&&($('.7').val()==='xx')){
-                  alert('X wins, bruh')
+                  return alert('X wins, bruh');
                 }
-
+    else if(counter===9){
+      return alert('Draw, bastards');
 
     }
-
-
+  //to function()
 
 
 /*
@@ -51,6 +50,6 @@ $(document).ready(function() { //runs jquery when page is ready
           window.alert('x wins');
       }
 */
-    );
+    }); //close function(event)
 
-});
+}); //close document
